@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Mi modelo 3D</title>
+  <!-- Carga el visor X3DOM -->
+  <script type="text/javascript" src="https://www.x3dom.org/download/x3dom.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://www.x3dom.org/download/x3dom.css"/>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background-color: #b4d1e8; /* azul suave */
+      margin: 0;
+      padding: 0;
+    }
+    x3d {
+      border: 1px solid #ccc;
+      margin-top: 20px;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #333;
+    }
+    .texture-preview {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      width: 120px;
+      border: 1px solid #aaa;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+      background-color: white;
+      padding: 4px;
+    }
+    .texture-preview img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mi modelo 3D</h1>
+
+  <!-- Visor del modelo -->
+  <x3d width="800px" height="600px">
+    <scene>
+      <inline url="trabajo_03.x3d"></inline>
+    </scene>
+  </x3d>
+
+  <footer>
+    Realizado por Ana Braojos
+  </footer>
+
+  <!-- Vista previa de la textura -->
+  <div class="texture-preview">
+    <img src="the-map-of-the-world-tablet_tex_01.png" alt="Textura aplicada">
+  </div>
+</body>
+</html>
